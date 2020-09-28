@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:background="@drawable/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"/>
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone"/>
+
+        <RadioGroup
+            android:id="@+id/main_tab"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="bottom">
+
+            <RadioButton
+                android:id="@+id/calculator"
+                android:text="@string/menu_cal"
+                android:drawableTop="@drawable/calcu_selector"
+                style="@style/TabRadioStyle"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/question"
+                android:text="@string/menu_que"
+                android:drawableTop="@drawable/question_selector"
+                style="@style/TabRadioStyle"/>
+            <RadioButton
+                android:id="@+id/tips"
+                android:text="@string/menu_tips"
+                android:drawableTop="@drawable/tips_selector"
+                style="@style/TabRadioStyle"/>
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>
